@@ -1,0 +1,77 @@
+/* Centering the traffic light */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d3d3d3;
+}
+
+/* Traffic light container */
+.traffic-light-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Traffic light box */
+.traffic-light {
+    background-color: black;
+    width: 120px;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Lights */
+.light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #333;
+}
+
+/* Traffic light animations */
+@keyframes redLight {
+    0%, 66% { background-color: red; }
+    67%, 100% { background-color: #333; }
+}
+
+@keyframes yellowLight {
+    0%, 33%, 100% { background-color: #333; }
+    34%, 66% { background-color: yellow; }
+}
+
+@keyframes greenLight {
+    0%, 33% { background-color: #333; }
+    34%, 100% { background-color: green; }
+}
+
+.red {
+    animation: redLight 6s infinite;
+}
+
+.yellow {
+    animation: yellowLight 6s infinite;
+}
+
+.green {
+    animation: greenLight 6s infinite;
+}
+
+/* Stand and base */
+.stand {
+    width: 20px;
+    height: 100px;
+    background-color: black;
+}
+
+.base {
+    width: 80px;
+    height: 20px;
+    background-color: black;
+    border-radius: 10px;
+}
